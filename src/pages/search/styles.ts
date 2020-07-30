@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 
 export const Img = styled.img`
-  width: 90px;
+  width: 400px;
+  height: 400px;
 `;
 
 export const Title = styled.h1`
