@@ -28,6 +28,8 @@ export const Content = styled.div`
     text-align: center;
     border-radius: 10px;
 
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+
     h1 {
       color: #7f00ff;
       margin-bottom: 24px;
@@ -42,7 +44,6 @@ export const Content = styled.div`
       margin-bottom: 24px;
     }
 
-
     a {
       color: #7f00ff;
       display: block;
@@ -52,30 +53,28 @@ export const Content = styled.div`
       transition: color 0.2s;
 
       &:hover {
-      color: ${shade(0.2, '#7f00ff')}
+        color: ${shade(0.2, '#7f00ff')};
       }
     }
   }
 
   > a {
-      color: #fff;
-      display: block;
-      margin-top: 24px;
-      margin: 24px;
-      text-decoration: none;
-      transition: color 0.2s;
+    color: #fff;
+    display: block;
+    margin-top: 24px;
+    margin: 24px;
+    text-decoration: none;
+    transition: color 0.2s;
 
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
 
-      svg {
-        margin-right: 15px;
-      }
-
-      &:hover {
-      color: ${shade(0.2, '#fff')}
-      }
+    svg {
+      margin-right: 15px;
     }
 
+    &:hover {
+      color: ${shade(0.2, '#fff')};
+    }
+  }
 `;
-

@@ -1,4 +1,5 @@
-import React, { useState ,createContext, useCallback, useContext  } from 'react';
+/* eslint-disable @typescript-eslint/ban-types */
+import React, { useState, createContext, useCallback, useContext } from 'react';
 import api from '../services/api';
 
 interface AuthState {
@@ -20,22 +21,22 @@ interface AuthContextData {
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export const AuthProvider: React.FC = ({ children }) => {
-  const [data, setData] = useState<AuthState>( () => {
+  const [data, setData] = useState<AuthState>(() => {
     const token = localStorage.getItem('@GoBarber:token');
     const user = localStorage.getItem('@GoBarber:user');
 
-    if (token && user ){
+    if (token && user) {
       return { token, user: JSON.parse(user) };
     }
 
     return {} as AuthState;
-  })
+  });
 
-  const signIn = useCallback(async({ email, password }) => {
-    const response = await  api.post('sessions', {
+  const signIn = useCallback(async ({ email, password }) => {
+    const response = await api.post('sessions', {
       email,
       password,
-    })
+    });
 
     const { token, user } = response.data;
 
@@ -54,7 +55,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 
   return (
     <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>
-      { children }
+      {children}
     </AuthContext.Provider>
   );
 };
