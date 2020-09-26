@@ -4,6 +4,7 @@ import { shade } from 'polished';
 export const Img = styled.img`
   width: 400px;
   height: 400px;
+  -webkit-user-drag: none;
 `;
 
 export const Title = styled.h1`
@@ -82,7 +83,6 @@ export const Words = styled.div`
         font-size: 20px;
         color: #3d3d4d;
         font-weight: bold;
-
       }
     }
   }

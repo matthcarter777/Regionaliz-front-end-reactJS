@@ -61,7 +61,6 @@ const Search: React.FC = () => {
             </div>
           </a>
         ))}
-        ;
       </Words>
     </>
   );
